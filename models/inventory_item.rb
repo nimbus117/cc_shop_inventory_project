@@ -63,6 +63,13 @@ class InventoryItem
     SqlRunner.run sql, values
   end
 
+  def manufacturer
+    sql = 'SELECT * FROM manufacturers WHERE id = $1'
+    values = [@manufacturer_id]
+    result = SqlRunner.run sql, values
+    Manufacturer.new result[0]
+  end
+
   def InventoryItem.map_items item_data
     item_data.map do |item|
       InventoryItem.new item
