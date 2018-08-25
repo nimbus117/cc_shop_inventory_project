@@ -35,4 +35,26 @@ class InventoryItem
     result = SqlRunner.run sql, values
     @id = result.first['id'].to_i
   end
+
+  def update
+    sql = '
+      UPDATE
+        inventory_items
+      SET
+      (
+        name,
+        manufacturer_id,
+        cost_price,
+        sell_price,
+        quantity,
+        notes
+      ) = (
+        $1, $2, $3, $4, $5, $6
+      )
+      WHERE id = $7
+    '
+    values = [@name, @manufacturer_id, @cost_price, @sell_price, @quantity, @notes, @id]
+    SqlRunner.run sql, values
+  end
+
 end
