@@ -1,0 +1,20 @@
+<h2>Inventory</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Manufacturer</th>
+    <th>Cost Price</th>
+    <th>Sell Price</th>
+    <th>Quantity</th>
+  </tr>
+<% @inventory.each do |item| %>
+<tr>
+  <td><%=item.name%></td>
+  <td><%=item.manufacturer.name%></td>
+  <td><%=item.cost_price%></td>
+  <td><%=item.sell_price%></td>
+  <td><%=item.quantity%></td>
+</tr>
+<% end %>
+</table>
