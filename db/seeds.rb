@@ -1,6 +1,8 @@
 require 'pry-byebug'
 require_relative '../models/manufacturer.rb'
 
+Manufacturer.delete_all
+
 manufacturer1 = Manufacturer.new({
   'name' => "Fred's Fruits",
   'address' => '100 Some Street',

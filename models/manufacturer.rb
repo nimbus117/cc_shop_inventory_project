@@ -74,4 +74,9 @@ class Manufacturer
     result = SqlRunner.run sql
     Manufacturer.map_items result
   end
+
+  def Manufacturer.delete_all
+    sql = 'DELETE FROM manufacturers'
+    SqlRunner.run sql
+  end
 end
