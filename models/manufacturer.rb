@@ -56,4 +56,10 @@ class Manufacturer
     values = [@name, @address, @city, @post_code, @phone, @notes, @id]
     SqlRunner.run sql, values
   end
+
+  def delete
+    sql = 'DELETE FROM manufacturers WHERE id = $1'
+    values = [@id]
+    SqlRunner.run sql, values
+  end
 end
