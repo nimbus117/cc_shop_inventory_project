@@ -18,5 +18,7 @@ CREATE TABLE inventory_items(
   cost_price DECIMAL NOT NULL,
   sell_price DECIMAL NOT NULL,
   quantity INT2 NOT NULL,
+  wrn_lvl INT2 NOT NULL,
+  crit_lvl INT2 NOT NULL,
   notes TEXT
 );

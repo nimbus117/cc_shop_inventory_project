@@ -1,7 +1,7 @@
 require_relative '../db/sql_runner.rb'
 
 class InventoryItem
-  attr_accessor :name, :manufacturer_id, :cost_price, :sell_price, :quantity, :notes
+  attr_accessor :name, :manufacturer_id, :cost_price, :sell_price, :quantity, :notes, :crit_lvl, :wrn_lvl
   attr_reader :id
 
   def initialize options
@@ -11,6 +11,8 @@ class InventoryItem
     @cost_price = options['cost_price']
     @sell_price = options['sell_price']
     @quantity = options['quantity']
+    @wrn_lvl = options['wrn_lvl']
+    @crit_lvl = options['crit_lvl']
     @notes = options['notes'] || ''
   end
 
@@ -23,15 +25,26 @@ class InventoryItem
         cost_price,
         sell_price,
         quantity,
+        wrn_lvl,
+        crit_lvl,
         notes
       )
       VALUES
       (
-        $1, $2, $3, $4, $5, $6
+        $1, $2, $3, $4, $5, $6, $7, $8
       )
       RETURNING id
     '
-    values = [@name, @manufacturer_id, @cost_price, @sell_price, @quantity, @notes]
+    values = [
+      @name,
+      @manufacturer_id,
+      @cost_price,
+      @sell_price,
+      @quantity,
+      @wrn_lvl,
+      @crit_lvl,
+      @notes
+    ]
     result = SqlRunner.run sql, values
     @id = result.first['id'].to_i
   end
@@ -49,11 +62,20 @@ class InventoryItem
         quantity,
         notes
       ) = (
-        $1, $2, $3, $4, $5, $6
+        $1, $2, $3, $4, $5, $6, $7, $8
       )
-      WHERE id = $7
+      WHERE id = $9
     '
-    values = [@name, @manufacturer_id, @cost_price, @sell_price, @quantity, @notes, @id]
+    values = [
+      @name,
+      @manufacturer_id,
+      @cost_price,
+      @sell_price,
+      @quantity,
+      @wrn_lvl,
+      @crit_lvl,
+      @notes
+    ]
     SqlRunner.run sql, values
   end
 

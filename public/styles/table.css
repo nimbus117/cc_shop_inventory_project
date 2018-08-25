@@ -1,0 +1,11 @@
+.crit_lvl {
+  color: red;
+}
+
+.wrn_lvl {
+  color: yellow;
+}
+
+.ok_lvl {
+  color: green;
+}
