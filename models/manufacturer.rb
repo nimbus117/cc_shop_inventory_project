@@ -11,7 +11,7 @@ class Manufacturer
     @city = options['city']
     @post_code = options['post_code']
     @phone = options['phone']
-    @notes = options['notes'] if options['notes']
+    @notes = options['notes'] || ''
   end
 
   def save
