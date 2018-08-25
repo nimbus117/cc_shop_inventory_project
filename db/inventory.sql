@@ -5,6 +5,8 @@ CREATE TABLE manufacturers(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   address VARCHAR(255) NOT NULL,
+  city VARCHAR(255) NOT NULL,
+  post_code VARCHAR(255) NOT NULL,
   phone VARCHAR(255) NOT NULL,
   notes TEXT
 );
