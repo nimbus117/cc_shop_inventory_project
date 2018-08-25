@@ -62,4 +62,17 @@ class InventoryItem
     values = [@id]
     SqlRunner.run sql, values
   end
+
+  def InventoryItem.map_items item_data
+    item_data.map do |item|
+      InventoryItem.new item
+    end
+  end
+
+  def InventoryItem.all
+    sql = 'SELECT * FROM inventory_items'
+    result = SqlRunner.run sql
+    InventoryItem.map_items result
+  end
+
 end
