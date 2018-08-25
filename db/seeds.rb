@@ -2,6 +2,7 @@ require 'pry-byebug'
 require_relative '../models/manufacturer.rb'
 require_relative '../models/inventory_item.rb'
 
+InventoryItem.delete_all
 Manufacturer.delete_all
 
 manufacturer1 = Manufacturer.new({
