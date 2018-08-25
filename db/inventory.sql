@@ -15,8 +15,8 @@ CREATE TABLE inventory_items(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   manufacturer_id INT8 REFERENCES manufacturers(id),
-  cost_price INT2 NOT NULL,
-  sell_price INT2 NOT NULL,
+  cost_price DECIMAL NOT NULL,
+  sell_price DECIMAL NOT NULL,
   quantity INT2 NOT NULL,
   notes TEXT
 );
