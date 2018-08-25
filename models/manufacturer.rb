@@ -1,6 +1,9 @@
 require_relative '../db/sql_runner.rb'
 
 class Manufacturer
+  attr_accessor :name, :address, :city, :post_code, :phone, :notes
+  attr_reader :id
+
   def initialize options
     @id = options['id'].to_i if options['id']
     @name = options['name']
@@ -31,5 +34,26 @@ class Manufacturer
     values = [@name, @address, @city, @post_code, @phone, @notes]
     results = SqlRunner.run sql, values
     @id = results.first['id'].to_i
+  end
+
+  def update
+    sql = '
+      UPDATE
+        manufacturers
+      SET
+      (
+        name,
+        address,
+        city,
+        post_code,
+        phone,
+        notes
+      ) = (
+        $1, $2, $3, $4, $5, $6
+      )
+      WHERE id = $7
+    '
+    values = [@name, @address, @city, @post_code, @phone, @notes, @id]
+    SqlRunner.run sql, values
   end
 end

@@ -1,3 +1,4 @@
+require 'pry-byebug'
 require_relative '../models/manufacturer.rb'
 
 manufacturer1 = Manufacturer.new({
@@ -10,3 +11,7 @@ manufacturer1 = Manufacturer.new({
 })
 
 manufacturer1.save
+
+
+binding.pry
+nil
