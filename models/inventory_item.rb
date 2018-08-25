@@ -99,4 +99,22 @@ class InventoryItem
     values = [id]
     SqlRunner.run sql, values
   end
+
+  def InventoryItem.get_by_manufacturer_id id
+    sql = '
+      SELECT
+        I.*
+      FROM
+        inventory_items AS I
+      INNER JOIN
+        manufacturers AS M
+      ON
+        I.manufacturer_id = M.id
+      WHERE
+        M.id = $1
+    '
+    values = [id]
+    result = SqlRunner.run sql, values
+    InventoryItem.map_items result
+  end
 end
