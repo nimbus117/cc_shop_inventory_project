@@ -79,4 +79,24 @@ class Manufacturer
     sql = 'DELETE FROM manufacturers'
     SqlRunner.run sql
   end
+
+  def Manufacturer.get_by_id id
+    sql = '
+      SELECT *
+      FROM manufacturers
+      WHERE id = $1
+    '
+    values = [id]
+    result = SqlRunner.run sql, values
+    Manufacturer.new result[0]
+  end
+
+  def Manufacturer.delete_by_id id
+    sql = '
+      DELETE FROM manufacturers
+      WHERE id = $1
+    '
+    values = [id]
+    SqlRunner.run sql, values
+  end
 end
