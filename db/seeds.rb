@@ -1,5 +1,6 @@
 require 'pry-byebug'
 require_relative '../models/manufacturer.rb'
+require_relative '../models/inventory_item.rb'
 
 Manufacturer.delete_all
 
@@ -21,6 +22,35 @@ manufacturer2 = Manufacturer.new({
   'phone' => '0131-332-4444'
 })
 manufacturer2.save
+
+inventory_item1 = InventoryItem.new({
+  'name' => 'Apples',
+  'manufacturer_id' => manufacturer1.id,
+  'cost_price' => 0.2,
+  'sell_price' => 0.5,
+  'quantity' => 20,
+  'notes' => 'notes about item go here'
+})
+inventory_item1.save
+
+inventory_item2 = InventoryItem.new({
+  'name' => 'Pears',
+  'manufacturer_id' => manufacturer1.id,
+  'cost_price' => 0.15,
+  'sell_price' => 0.4,
+  'quantity' => 20
+})
+inventory_item2.save
+
+inventory_item3 = InventoryItem.new({
+  'name' => 'Bananas',
+  'manufacturer_id' => manufacturer2.id,
+  'cost_price' => 0.1,
+  'sell_price' => 0.3,
+  'quantity' => 40,
+  'notes' => 'notes about item go here'
+})
+inventory_item3.save
 
 binding.pry
 nil
