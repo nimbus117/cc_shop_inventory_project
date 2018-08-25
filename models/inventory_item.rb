@@ -79,4 +79,24 @@ class InventoryItem
     sql = 'DELETE FROM inventory_items'
     SqlRunner.run sql
   end
+
+  def InventoryItem.get_by_id id
+    sql = '
+      SELECT *
+      FROM inventory_items
+      WHERE id = $1
+    '
+    values = [id]
+    result = SqlRunner.run sql, values
+    InventoryItem.new result[0]
+  end
+
+  def InventoryItem.delete_by_id id
+    sql = '
+      DELETE FROM inventory_items
+      WHERE id = $1
+    '
+    values = [id]
+    SqlRunner.run sql, values
+  end
 end
