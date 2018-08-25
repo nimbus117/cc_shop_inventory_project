@@ -32,8 +32,8 @@ class Manufacturer
       RETURNING id
     '
     values = [@name, @address, @city, @post_code, @phone, @notes]
-    results = SqlRunner.run sql, values
-    @id = results.first['id'].to_i
+    result = SqlRunner.run sql, values
+    @id = result.first['id'].to_i
   end
 
   def update
@@ -61,5 +61,17 @@ class Manufacturer
     sql = 'DELETE FROM manufacturers WHERE id = $1'
     values = [@id]
     SqlRunner.run sql, values
+  end
+
+  def Manufacturer.map_items manufacturer_data
+    manufacturer_data.map do |manufacturer|
+      Manufacturer.new manufacturer
+    end
+  end
+
+  def Manufacturer.all
+    sql = 'SELECT * FROM manufacturers'
+    result = SqlRunner.run sql
+    Manufacturer.map_items result
   end
 end
