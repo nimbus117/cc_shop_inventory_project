@@ -18,8 +18,7 @@
       <td><%=item.manufacturer.name%></td>
       <td><%=item.cost_price%></td>
       <td><%=item.sell_price%></td>
-      <%markup = (item.sell_price.to_f / item.cost_price.to_f) - 1%>
-      <td><%=markup.round(1)%></td>
+      <td><%=item.markup%></td>
       <%if item.quantity <= item.crit_lvl%>
       <td class="crit_lvl"><%=item.quantity%></td>
       <%elsif item.quantity <= item.wrn_lvl%>
@@ -31,5 +30,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%# add markup to InventoryItem class - instance method %>

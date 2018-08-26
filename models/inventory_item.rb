@@ -7,12 +7,12 @@ class InventoryItem
   def initialize options
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @manufacturer_id = options['manufacturer_id']
-    @cost_price = options['cost_price']
-    @sell_price = options['sell_price']
-    @quantity = options['quantity']
-    @wrn_lvl = options['wrn_lvl']
-    @crit_lvl = options['crit_lvl']
+    @manufacturer_id = options['manufacturer_id'].to_i
+    @cost_price = options['cost_price'].to_f
+    @sell_price = options['sell_price'].to_f
+    @quantity = options['quantity'].to_i
+    @wrn_lvl = options['wrn_lvl'].to_i
+    @crit_lvl = options['crit_lvl'].to_i
     @notes = options['notes'] || ''
   end
 
@@ -90,6 +90,10 @@ class InventoryItem
     values = [@manufacturer_id]
     result = SqlRunner.run sql, values
     Manufacturer.new result[0]
+  end
+
+  def markup
+    ((@sell_price / @cost_price) - 1).round(2)
   end
 
   def InventoryItem.map_items item_data
