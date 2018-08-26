@@ -1,26 +1,35 @@
 <h2>Inventory</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Manufacturer</th>
-    <th>Cost Price</th>
-    <th>Sell Price</th>
-    <th>Quantity</th>
-  </tr>
-<% @inventory.each do |item| %>
-<tr>
-  <td><%=item.name%></td>
-  <td><%=item.manufacturer.name%></td>
-  <td><%=item.cost_price%></td>
-  <td><%=item.sell_price%></td>
-  <%if item.quantity <= item.crit_lvl%>
-    <td class="crit_lvl"><%=item.quantity%></td>
-  <%elsif item.quantity <= item.wrn_lvl%>
-    <td class="wrn_lvl"><%=item.quantity%></td>
-  <%else%>
-    <td class="ok_lvl"><%=item.quantity%></td>
-  <%end%>
-</tr>
-<% end %>
+<table class="blueTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Manufacturer</th>
+      <th>Cost Price</th>
+      <th>Sell Price</th>
+      <th>Mark Up</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @inventory.each do |item| %>
+    <tr>
+      <td><%=item.name%></td>
+      <td><%=item.manufacturer.name%></td>
+      <td><%=item.cost_price%></td>
+      <td><%=item.sell_price%></td>
+      <%markup = (item.sell_price.to_f / item.cost_price.to_f) - 1%>
+      <td><%=markup.round(1)%></td>
+      <%if item.quantity <= item.crit_lvl%>
+      <td class="crit_lvl"><%=item.quantity%></td>
+      <%elsif item.quantity <= item.wrn_lvl%>
+      <td class="wrn_lvl"><%=item.quantity%></td>
+      <%else%>
+      <td class="ok_lvl"><%=item.quantity%></td>
+      <%end%>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
+
+<%# add markup to InventoryItem class - instance method %>
