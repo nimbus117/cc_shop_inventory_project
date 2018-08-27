@@ -1,0 +1,23 @@
+<h2>Edit Manufacturer</h2>
+
+  <form action="/manufacturers/<%=@manufacturer.id%>/edit" method="post">
+
+  <label for="manufacturer-name">Name: </label>
+    <input id="manufacturer-name" type="text" name="name" value="<%=@manufacturer.name%>">
+
+  <label for="manufacturer-address">Address: </label>
+    <input id="manufacturer-address" type="text" name="address" value="<%=@manufacturer.address%>">
+
+  <label for="manufacturer-city">City: </label>
+    <input id="manufacturer-city" type="text" name="city" value="<%=@manufacturer.city%>">
+
+  <label for="manufacturer-post-code">Post Code: </label>
+    <input id="manufacturer-post-code" type="text" name="post_code" value="<%=@manufacturer.post_code%>">
+
+  <label for="manufacturer-phone">Phone Number: </label>
+    <input id="manufacturer-phone" type="text" name="phone" value="<%=@manufacturer.phone%>">
+
+  <label for="manufacturer-notes">Notes: </label>
+    <textarea id="manufacturer-notes" name="notes" rows="5"><%=@manufacturer.notes%></textarea>
+
+<input class="btn" type="submit" value="Edit manufacturer">

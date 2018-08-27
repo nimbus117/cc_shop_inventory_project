@@ -25,3 +25,14 @@ post '/manufacturers/:id/delete' do
   manufacturer.delete
   redirect to '/manufacturers'
 end
+
+get '/manufacturers/:id/edit' do
+  @manufacturer = Manufacturer.get_by_id params[:id].to_i
+  erb :"manufacturers/edit"
+end
+
+post '/manufacturers/:id/edit' do
+  manufacturer = Manufacturer.new params
+  manufacturer.update
+  redirect to "/manufacturers/#{manufacturer.id}"
+end
