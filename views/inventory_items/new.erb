@@ -1,0 +1,35 @@
+<h2>New Item</h2>
+
+<form action="/inventory/new" method="post">
+  <Label>
+    Select a manufacturer: 
+    <select id="new_item_form" name="manufacturer_id">
+      <%@manufacturers.each do |manufacturer|%>
+        <option value="<%=manufacturer.id%>"><%=manufacturer.name%></option>
+      <%end%>
+    </select>
+  </label>
+
+  <label for="item-name">Name: </label>
+    <input id="item-name" type="text" name="name">
+
+  <label for="item-cost-price">Cost Price: </label>
+    <input id="item-cost-price" type="text" name="cost_price">
+
+  <label for="item-sell-price">Sell Price: </label>
+    <input id="item-sell-price" type="text" name="sell_price">
+
+  <label for="item-quantity">Quantity: </label>
+    <input id="item-quantity" type="number" name="quantity">
+
+  <label for="item-wrn-lvl">Warning Level: </label>
+    <input id="item-wrn-lvl" type="number" name="wrn_lvl">
+
+  <label for="item-crit-lvl">Critical Level: </label>
+    <input id="item-crit-lvl" type="number" name="crit_lvl">
+
+  <label for="item-notes">Notes: </label>
+  <textarea id="item-notes" name="notes" rows="5"></textarea>
+
+<input class="btn" type="submit" value="Add item">
+</form>
