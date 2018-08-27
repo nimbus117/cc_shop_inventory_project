@@ -1,0 +1,24 @@
+<h2>Manufacturers</h2>
+
+<table class="blueTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Post Code</th>
+      <th>Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @manufacturers.each do |manufacturer| %>
+    <tr>
+      <td><%=manufacturer.name%></td>
+      <td><%=manufacturer.address%></td>
+      <td><%=manufacturer.city%></td>
+      <td><%=manufacturer.post_code%></td>
+      <td><%=manufacturer.phone%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
