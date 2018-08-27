@@ -1,7 +1,6 @@
 <h2>Edit Manufacturer</h2>
 
-  <form action="/manufacturers/<%=@manufacturer.id%>/edit" method="post">
-
+<form action="/manufacturers/<%=@manufacturer.id%>/edit" method="post">
   <label for="manufacturer-name">Name: </label>
     <input id="manufacturer-name" type="text" name="name" value="<%=@manufacturer.name%>">
 
@@ -20,4 +19,5 @@
   <label for="manufacturer-notes">Notes: </label>
     <textarea id="manufacturer-notes" name="notes" rows="5"><%=@manufacturer.notes%></textarea>
 
-<input class="btn" type="submit" value="Edit manufacturer">
+  <input class="btn" type="submit" value="Edit manufacturer">
+</form>
