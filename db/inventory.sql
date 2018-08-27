@@ -14,7 +14,7 @@ CREATE TABLE manufacturers(
 CREATE TABLE inventory_items(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  manufacturer_id INT8 REFERENCES manufacturers(id),
+  manufacturer_id INT8 REFERENCES manufacturers(id) ON DELETE CASCADE,
   cost_price DECIMAL NOT NULL,
   sell_price DECIMAL NOT NULL,
   quantity INT2 NOT NULL,
