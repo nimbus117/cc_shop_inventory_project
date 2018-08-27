@@ -60,6 +60,8 @@ class InventoryItem
         cost_price,
         sell_price,
         quantity,
+        wrn_lvl,
+        crit_lvl,
         notes
       ) = (
         $1, $2, $3, $4, $5, $6, $7, $8
@@ -74,7 +76,8 @@ class InventoryItem
       @quantity,
       @wrn_lvl,
       @crit_lvl,
-      @notes
+      @notes,
+      @id
     ]
     SqlRunner.run sql, values
   end
