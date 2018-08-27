@@ -14,15 +14,3 @@ h2 {
   font-size: 1.7em;
   margin: 10px 0;
 }
-
-.crit_lvl {
-  color: red;
-}
-
-.wrn_lvl {
-  color: orange;
-}
-
-.ok_lvl {
-  color: green;
-}
