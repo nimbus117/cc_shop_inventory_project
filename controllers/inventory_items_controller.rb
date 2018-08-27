@@ -21,3 +21,9 @@ get '/inventory/:id' do
   @item = InventoryItem.get_by_id params[:id].to_i
   erb :"inventory_items/show"
 end
+
+post '/inventory/:id/delete' do
+  item = InventoryItem.get_by_id params[:id].to_i
+  item.delete
+  redirect to '/inventory'
+end

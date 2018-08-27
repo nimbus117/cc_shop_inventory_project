@@ -9,3 +9,7 @@
   <li>Quantity: <span class="<%=@item.quantity_lvl%>"><%=@item.quantity%></span></li>
   <li>Notes: <%=@item.notes%></li>
 </ul>
+
+<form action="/inventory/<%=@item.id%>/delete" method="post">
+  <input class="btn delete-btn" type="submit" value="Delete item">
+</form>
