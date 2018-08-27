@@ -1,0 +1,29 @@
+<h2>Item Details</h2>
+
+
+
+<ul>
+  <li>Name: <%=@item.name%></li>
+  <li>Manufacturer: <%=@item.manufacturer.name%></li>
+  <li>Cost price: <%=@item.cost_price%></li>
+  <li>Sell price: <%=@item.sell_price%></li>
+  <li>Markup: <%=@item.markup%></li>
+  <%if @item.quantity <= @item.crit_lvl%>
+  <li class="crit_lvl">Quantity: <%=@item.quantity%></li>
+  <%elsif @item.quantity <= @item.wrn_lvl%>
+  <li class="wrn_lvl">Quantity: <%=@item.quantity%></li>
+  <%else%>
+  <li class="ok_lvl">Quantity: <%=@item.quantity%></li>
+  <%end%>
+  <li>Notes: <%=@item.notes%></li>
+</ul>
+
+
+
+
+
+
+
+
+<%= %>
+<% %>

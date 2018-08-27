@@ -9,3 +9,15 @@ main {
 footer {
   text-align: center;
 }
+
+.crit_lvl {
+  color: red;
+}
+
+.wrn_lvl {
+  color: orange;
+}
+
+.ok_lvl {
+  color: green;
+}

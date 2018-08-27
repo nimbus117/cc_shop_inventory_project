@@ -9,6 +9,7 @@
       <th>Sell Price</th>
       <th>Mark Up</th>
       <th>Quantity</th>
+      <th>Details</th>
     </tr>
   </thead>
   <tbody>
@@ -26,6 +27,7 @@
       <%else%>
       <td class="ok_lvl"><%=item.quantity%></td>
       <%end%>
+      <td><a href="/inventory/<%=item.id%>">details</a></td>
     </tr>
     <% end %>
   </tbody>

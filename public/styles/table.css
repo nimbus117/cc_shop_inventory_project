@@ -32,15 +32,4 @@ table.blueTable thead th:first-child {
   border-left: none;
 }
 
-table > tbody > tr > td.crit_lvl {
-  color: red;
-}
-
-table > tbody > tr > td.wrn_lvl {
-  color: orange;
-}
-
-table > tbody > tr > td.ok_lvl {
-  color: green;
-}
 
