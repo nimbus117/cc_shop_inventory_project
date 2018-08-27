@@ -8,3 +8,7 @@
   <li>Phone Number: <%=@manufacturer.phone%></li>
   <li>Notes: <%=@manufacturer.notes%></li>
 </ul>
+
+<form action="/manufacturers/<%=@manufacturer.id%>/delete" method="post">
+  <input class="btn delete-btn" type="submit" value="Delete manufacturer">
+</form>
