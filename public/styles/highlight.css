@@ -1,11 +1,11 @@
-.crit_lvl {
+.quantity_critical {
   color: red;
 }
 
-.wrn_lvl {
+.quantity_warning {
   color: orange;
 }
 
-.ok_lvl {
+.quantity_ok {
   color: green;
 }

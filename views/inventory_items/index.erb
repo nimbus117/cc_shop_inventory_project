@@ -20,13 +20,7 @@
       <td><%=item.cost_price%></td>
       <td><%=item.sell_price%></td>
       <td><%=item.markup%></td>
-      <%if item.quantity <= item.crit_lvl%>
-      <td class="crit_lvl"><%=item.quantity%></td>
-      <%elsif item.quantity <= item.wrn_lvl%>
-      <td class="wrn_lvl"><%=item.quantity%></td>
-      <%else%>
-      <td class="ok_lvl"><%=item.quantity%></td>
-      <%end%>
+      <td class="<%=item.quantity_lvl%>"><%=item.quantity%></td>
       <td><a href="/inventory/<%=item.id%>">details</a></td>
     </tr>
     <% end %>

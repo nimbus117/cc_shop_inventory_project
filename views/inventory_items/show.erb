@@ -6,12 +6,6 @@
   <li>Cost price: <%=@item.cost_price%></li>
   <li>Sell price: <%=@item.sell_price%></li>
   <li>Markup: <%=@item.markup%></li>
-  <%if @item.quantity <= @item.crit_lvl%>
-  <li>Quantity: <span class="crit_lvl"><%=@item.quantity%></span></li>
-  <%elsif @item.quantity <= @item.wrn_lvl%>
-  <li>Quantity: <span class="wrn_lvl"><%=@item.quantity%></span></li>
-  <%else%>
-  <li>Quantity: <span class="ok_lvl"><%=@item.quantity%></span></li>
-  <%end%>
+  <li>Quantity: <span class="<%=@item.quantity_lvl%>"><%=@item.quantity%></span></li>
   <li>Notes: <%=@item.notes%></li>
 </ul>

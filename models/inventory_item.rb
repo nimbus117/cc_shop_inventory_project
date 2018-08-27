@@ -96,6 +96,16 @@ class InventoryItem
     ((@sell_price / @cost_price) - 1).round(2)
   end
 
+  def quantity_lvl
+    if @quantity <= @crit_lvl
+      'quantity_critical'
+    elsif @quantity <= @wrn_lvl
+      'quantity_warning'
+    else
+      'quantity_ok'
+    end
+  end
+
   def InventoryItem.map_items item_data
     item_data.map do |item|
       InventoryItem.new item
