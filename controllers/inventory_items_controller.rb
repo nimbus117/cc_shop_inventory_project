@@ -14,7 +14,7 @@ end
 post '/inventory/new' do
   new_item = InventoryItem.new(params)
   new_item.save
-  redirect to '/inventory'
+  redirect to "/inventory/#{new_item.id}"
 end
 
 get '/inventory/:id' do
