@@ -1,0 +1,41 @@
+<h2>Edit Item</h2>
+
+<%man_name = @item.manufacturer.name%>
+
+<form action="/inventory/<%=@item.id%>/edit" method="post">
+  <Label>
+    Select a manufacturer: 
+    <select id="new_item_form" name="manufacturer_id">
+      <%@manufacturers.each do |manufacturer|%>
+        <%if manufacturer.name == man_name%>
+        <option value="<%=manufacturer.id%>" selected><%=manufacturer.name%></option>
+        <%else%>
+        <option value="<%=manufacturer.id%>"><%=manufacturer.name%></option>
+        <%end%>
+      <%end%>
+    </select>
+  </label>
+
+  <label for="item-name">Name: </label>
+  <input id="item-name" type="text" name="name" value="<%=@item.name%>">
+
+  <label for="item-cost-price">Cost Price: </label>
+    <input id="item-cost-price" type="text" name="cost_price" value="<%=@item.cost_price%>">
+
+  <label for="item-sell-price">Sell Price: </label>
+    <input id="item-sell-price" type="text" name="sell_price" value="<%=@item.sell_price%>">
+
+  <label for="item-quantity">Quantity: </label>
+    <input id="item-quantity" type="number" name="quantity" value="<%=@item.quantity%>">
+
+  <label for="item-wrn-lvl">Warning Level: </label>
+    <input id="item-wrn-lvl" type="number" name="wrn_lvl" value="<%=@item.wrn_lvl%>">
+
+  <label for="item-crit-lvl">Critical Level: </label>
+    <input id="item-crit-lvl" type="number" name="crit_lvl" value="<%=@item.crit_lvl%>">
+
+  <label for="item-notes">Notes: </label>
+  <textarea id="item-notes" name="notes" rows="5"><%=@item.notes%></textarea>
+
+<input class="btn" type="submit" value="Update item">
+</form>

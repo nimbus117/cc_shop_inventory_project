@@ -27,3 +27,15 @@ post '/inventory/:id/delete' do
   item.delete
   redirect to '/inventory'
 end
+
+get '/inventory/:id/edit' do
+  @item = InventoryItem.get_by_id params[:id].to_i
+  @manufacturers = Manufacturer.all
+  erb :"inventory_items/edit"
+end
+
+post '/inventory/:id/edit' do
+  item = InventoryItem.new params
+  item.update
+  redirect to "/inventory/#{item.id}"
+end
