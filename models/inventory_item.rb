@@ -216,4 +216,18 @@ class InventoryItem
     result = SqlRunner.run sql
     InventoryItem.map_items result
   end
+
+  def InventoryItem.get_low_stock count = 5
+    sql = "
+      SELECT
+        *,(quantity - crit_lvl) AS priority
+      FROM
+        inventory_items
+      ORDER BY
+        priority
+      LIMIT #{count}
+    "
+    result = SqlRunner.run sql
+    InventoryItem.map_items result
+  end
 end

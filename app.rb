@@ -5,5 +5,6 @@ require_relative './controllers/manufacturers_controller.rb'
 also_reload './models/*'
 
 get '/' do
+  @low_stock = InventoryItem.get_low_stock
   erb :index
 end
