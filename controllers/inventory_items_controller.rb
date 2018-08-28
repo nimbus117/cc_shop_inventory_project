@@ -17,7 +17,7 @@ post '/inventory/new' do
   redirect to "/inventory/#{new_item.id}"
 end
 
-get '/inventory/:id' do
+get '/inventory/:id/show' do
   @item = InventoryItem.get_by_id params[:id].to_i
   erb :"inventory_items/show"
 end
