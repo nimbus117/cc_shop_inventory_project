@@ -1,7 +1,6 @@
-<h2>Item Details</h2>
+<h2><%=@item.name%></h2>
 
 <ul>
-  <li>Name: <%=@item.name%></li>
   <li>Manufacturer: <%=@item.manufacturer.name%></li>
   <li>Cost price: <%=@item.cost_price%></li>
   <li>Sell price: <%=@item.sell_price%></li>
@@ -12,8 +11,9 @@
   <li>Notes: <%=@item.notes%></li>
 </ul>
 
+<a href="/manufacturers/<%=@item.manufacturer_id%>"><button type="button">Manufacturer</button></a>
+<a href="/inventory/<%=@item.id%>/edit"><button type="button">Edit</button></a>
+
 <form action="/inventory/<%=@item.id%>/delete" method="post">
   <input class="btn delete-btn" type="submit" value="Delete">
 </form>
-
-<a href="/inventory/<%=@item.id%>/edit"><button type="button">Edit</button></a>
