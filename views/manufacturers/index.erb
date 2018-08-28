@@ -1,6 +1,23 @@
 <h2>Manufacturers</h2>
 
-<a href="/manufacturers/new"><button type="button">Add Manufacturer</button></a>
+<form class="index_form" action="/manufacturers" method="get">
+  <Label>
+    Select a city: 
+    <select id="filter_manufacturers" name="city">
+      <option disabled selected>select an option</option>
+      <%@manufacturers.each do |manufacturer|%>
+        <%if manufacturer.id == @man_id%>
+          <option value="<%=manufacturer.city%>" selected><%=manufacturer.city%></option>
+        <%else%>
+          <option value="<%=manufacturer.city%>"><%=manufacturer.city%></option>
+        <%end%>
+      <%end%>
+    </select>
+  </label>
+  <input class="btn" type="submit" value="Filter">
+  <a href="/manufacturers"><button type="button">All</button></a>
+  <a href="/manufacturers/new"><button type="button">Add Manufacturer</button></a>
+</form>
 
 <table class="blueTable">
   <thead>
@@ -14,7 +31,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @manufacturers.each do |manufacturer| %>
+    <% @to_display.each do |manufacturer| %>
     <tr>
       <td><%=manufacturer.name%></td>
       <td><%=manufacturer.address%></td>
