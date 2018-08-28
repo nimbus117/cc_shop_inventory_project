@@ -220,7 +220,7 @@ class InventoryItem
   def InventoryItem.get_low_stock count = 5
     sql = "
       SELECT
-        *,(quantity - crit_lvl) AS priority
+        *,(quantity::decimal / crit_lvl) AS priority
       FROM
         inventory_items
       ORDER BY
