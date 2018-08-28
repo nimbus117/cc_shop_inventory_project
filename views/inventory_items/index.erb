@@ -1,6 +1,23 @@
 <h2>Inventory</h2>
 
-<a href="/inventory/new"><button type="button">Add Item</button></a>
+<form class="index_form" action="/inventory" method="get">
+  <Label>
+    Select a manufacturer: 
+    <select id="filter_inventory" name="manufacturer_id">
+      <option disabled selected>select an option</option>
+      <%@manufacturers.each do |manufacturer|%>
+        <%if manufacturer.id == @man_id%>
+          <option value="<%=manufacturer.id%>" selected><%=manufacturer.name%></option>
+        <%else%>
+          <option value="<%=manufacturer.id%>"><%=manufacturer.name%></option>
+        <%end%>
+      <%end%>
+    </select>
+  </label>
+  <input class="btn" type="submit" value="Filter">
+  <a href="/inventory"><button type="button">All</button></a>
+  <a href="/inventory/new"><button type="button">Add Item</button></a>
+</form>
 
 <table class="blueTable">
   <thead>

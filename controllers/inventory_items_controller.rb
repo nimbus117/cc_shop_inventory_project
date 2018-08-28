@@ -2,7 +2,9 @@ require './models/inventory_item.rb'
 require './models/manufacturer.rb'
 
 get '/inventory' do
-  @inventory = InventoryItem.all_with_manufacturer_name
+  @manufacturers = Manufacturer.all
+  @inventory = InventoryItem.all_with_manufacturer_name params['manufacturer_id']
+  @man_id = params['manufacturer_id'].to_i
   erb :"inventory_items/index"
 end
 
