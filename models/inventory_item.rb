@@ -121,7 +121,7 @@ class InventoryItem
     InventoryItem.map_items result
   end
 
-  def InventoryItem.all_with_manufacturer_name
+  def InventoryItem.all_with_manufacturer_name man_id = nil
     sql = '
       SELECT
         I.*,M.name AS manufacturer_name
@@ -131,9 +131,9 @@ class InventoryItem
         manufacturers AS M
       ON
         I.manufacturer_id = M.id
-      ORDER BY
-        I.name
     '
+    sql << "WHERE M.id = #{man_id}" if man_id != nil
+    sql << 'ORDER BY I.name'
     result = SqlRunner.run sql
     result.map {|item| item}
   end
