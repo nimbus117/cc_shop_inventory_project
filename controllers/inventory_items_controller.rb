@@ -2,7 +2,7 @@ require './models/inventory_item.rb'
 require './models/manufacturer.rb'
 
 get '/inventory' do
-  @inventory = InventoryItem.all
+  @inventory = InventoryItem.all_with_manufacturer_name
   erb :"inventory_items/index"
 end
 

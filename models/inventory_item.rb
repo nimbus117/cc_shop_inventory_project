@@ -131,6 +131,8 @@ class InventoryItem
         manufacturers AS M
       ON
         I.manufacturer_id = M.id
+      ORDER BY
+        I.name
     '
     result = SqlRunner.run sql
     result.map {|item| item}
