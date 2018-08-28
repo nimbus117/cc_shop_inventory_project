@@ -39,3 +39,9 @@ post '/inventory/:id/edit' do
   item.update
   redirect to "/inventory/#{item.id}"
 end
+
+get '/inventory/manufacturer/:id' do
+  @manufacturer = Manufacturer.get_by_id params[:id].to_i
+  @inventory = InventoryItem.get_by_manufacturer_id params[:id].to_i
+  erb :"inventory_items/manufacturer/index"
+end

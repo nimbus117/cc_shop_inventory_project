@@ -9,6 +9,9 @@
   <li>Notes: <%=@manufacturer.notes%></li>
 </ul>
 
+<a href="/manufacturers/<%=@manufacturer.id%>/edit"><button type="button">Edit</button></a>
+<a href="/inventory/manufacturer/<%=@manufacturer.id%>"><button type="button">Items</button></a>
+
 <form action="/manufacturers/<%=@manufacturer.id%>/delete" method="post">
   <%if @manufacturer.item_count > 0%>
   <input class="btn delete-btn" type="submit" value="Delete" disabled> 
@@ -17,5 +20,3 @@
   <input class="btn delete-btn" type="submit" value="Delete">
   <%end%>
 </form>
-
-<a href="/manufacturers/<%=@manufacturer.id%>/edit"><button type="button">Edit</button></a>

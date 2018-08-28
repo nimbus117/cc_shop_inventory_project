@@ -1,0 +1,26 @@
+<h2>Inventory - <%=@manufacturer.name%></h2>
+
+<table class="blueTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cost Price</th>
+      <th>Sell Price</th>
+      <th>Mark Up</th>
+      <th>Quantity</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @inventory.each do |item| %>
+    <tr>
+      <td><%=item.name%></td>
+      <td><%=item.cost_price%></td>
+      <td><%=item.sell_price%></td>
+      <td><%=item.markup%></td>
+      <td class="<%=item.quantity_lvl%>"><%=item.quantity%></td>
+      <td><a href="/inventory/<%=item.id%>">details</a></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
