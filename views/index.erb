@@ -1,7 +1,6 @@
-<p>Home Page</p>
-
-<div id="critical_summary">
-  <h2>Low Stock Summary</h2>
+<h2>Summary</h2>
+<div class="summary">
+  <h3>Low Stock</h3>
   <table class="blueTable">
     <thead>
       <tr>
@@ -15,6 +14,27 @@
         <tr>
           <td><%=item.name%></td>
           <td class="<%=item.quantity_lvl%>"><%=item.quantity%></td>
+          <td><a href="/inventory/<%=item.id%>">view</a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<div class="summary">
+  <h3>Most Profitable</h3>
+  <table class="blueTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Markup</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @most_profitable.each do |item| %>
+        <tr>
+          <td><%=item.name%></td>
+          <td><%=item.markup%></td>
           <td><a href="/inventory/<%=item.id%>">view</a></td>
         </tr>
       <% end %>

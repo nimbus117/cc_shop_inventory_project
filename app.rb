@@ -6,5 +6,7 @@ also_reload './models/*'
 
 get '/' do
   @low_stock = InventoryItem.get_low_stock
+  sorted_items = InventoryItem.all.sort_by {|item| item.markup}
+  @most_profitable = sorted_items.reverse.first(5)
   erb :index
 end
