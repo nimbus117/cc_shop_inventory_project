@@ -2,10 +2,11 @@ require './models/manufacturer.rb'
 
 get '/manufacturers' do
   @manufacturers = Manufacturer.all
-  if params['city'] == nil
+  @man_city = params['city']
+  if @man_city == nil
     @to_display = @manufacturers
   else
-    @to_display = @manufacturers.select {|man| man.city == params['city']}
+    @to_display = @manufacturers.select {|man| man.city == @man_city}
   end
   erb :"manufacturers/index"
 end

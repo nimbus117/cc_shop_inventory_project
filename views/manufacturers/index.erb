@@ -6,7 +6,7 @@
     <select id="filter_manufacturers" name="city">
       <option disabled selected>select an option</option>
       <%@manufacturers.each do |manufacturer|%>
-        <%if manufacturer.id == @man_id%>
+        <%if manufacturer.city == @man_city%>
           <option value="<%=manufacturer.city%>" selected><%=manufacturer.city%></option>
         <%else%>
           <option value="<%=manufacturer.city%>"><%=manufacturer.city%></option>
