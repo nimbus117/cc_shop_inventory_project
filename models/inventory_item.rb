@@ -182,4 +182,38 @@ class InventoryItem
     result = SqlRunner.run sql, values
     InventoryItem.map_items result
   end
+
+  def InventoryItem.get_stock_in_warning count = 5
+    sql = "
+      SELECT
+        *
+      FROM
+        inventory_items
+      WHERE
+        quantity <= wrn_lvl
+      AND
+        quantity > crit_lvl
+      ORDER BY
+        quantity
+      LIMIT #{count}
+    "
+    result = SqlRunner.run sql
+    InventoryItem.map_items result
+  end
+
+  def InventoryItem.get_stock_in_critical count = 5
+    sql = "
+      SELECT
+        *
+      FROM
+        inventory_items
+      WHERE
+        quantity <= crit_lvl
+      ORDER BY
+        quantity
+      LIMIT #{count}
+    "
+    result = SqlRunner.run sql
+    InventoryItem.map_items result
+  end
 end
