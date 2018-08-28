@@ -11,22 +11,22 @@
   </label>
 
   <label for="item-name">Name: </label>
-    <input id="item-name" type="text" name="name">
+    <input id="item-name" type="text" name="name" required>
 
   <label for="item-cost-price">Cost Price: </label>
-    <input id="item-cost-price" type="number" name="cost_price">
+    <input id="item-cost-price" type="number" name="cost_price" step="0.01" min="0" required>
 
   <label for="item-sell-price">Sell Price: </label>
-    <input id="item-sell-price" type="number" name="sell_price">
+    <input id="item-sell-price" type="number" name="sell_price" step="0.01" min="0" required>
 
   <label for="item-quantity">Quantity: </label>
-    <input id="item-quantity" type="number" name="quantity">
+    <input id="item-quantity" type="number" name="quantity" min="0" required>
 
   <label for="item-wrn-lvl">Warning Level: </label>
-    <input id="item-wrn-lvl" type="number" name="wrn_lvl">
+    <input id="item-wrn-lvl" type="number" name="wrn_lvl" min="0" required>
 
   <label for="item-crit-lvl">Critical Level: </label>
-    <input id="item-crit-lvl" type="number" name="crit_lvl">
+    <input id="item-crit-lvl" type="number" name="crit_lvl" min="0" required>
 
   <label for="item-notes">Notes: </label>
     <textarea id="item-notes" name="notes" rows="5"></textarea>

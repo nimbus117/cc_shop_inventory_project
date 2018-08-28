@@ -5,7 +5,7 @@
 <form action="/inventory/<%=@item.id%>/edit" method="post">
   <Label>
     Select a manufacturer: 
-    <select id="new_item_form" name="manufacturer_id">
+    <select id="edit_item_form" name="manufacturer_id">
       <%@manufacturers.each do |manufacturer|%>
         <%if manufacturer.name == man_name%>
         <option value="<%=manufacturer.id%>" selected><%=manufacturer.name%></option>
@@ -17,22 +17,22 @@
   </label>
 
   <label for="item-name">Name: </label>
-    <input id="item-name" type="text" name="name" value="<%=@item.name%>">
+    <input id="item-name" type="text" name="name" value="<%=@item.name%>" required>
 
   <label for="item-cost-price">Cost Price: </label>
-    <input id="item-cost-price" type="number" name="cost_price" value="<%=@item.cost_price%>">
+    <input id="item-cost-price" type="number" name="cost_price" value="<%=@item.cost_price%>" step="0.01" min="0" required>
 
   <label for="item-sell-price">Sell Price: </label>
-    <input id="item-sell-price" type="number" name="sell_price" value="<%=@item.sell_price%>">
+    <input id="item-sell-price" type="number" name="sell_price" value="<%=@item.sell_price%>" step="0.01" min="0" required>
 
   <label for="item-quantity">Quantity: </label>
-    <input id="item-quantity" type="number" name="quantity" value="<%=@item.quantity%>">
+    <input id="item-quantity" type="number" name="quantity" value="<%=@item.quantity%>" min="0" required>
 
   <label for="item-wrn-lvl">Warning Level: </label>
-    <input id="item-wrn-lvl" type="number" name="wrn_lvl" value="<%=@item.wrn_lvl%>">
+    <input id="item-wrn-lvl" type="number" name="wrn_lvl" value="<%=@item.wrn_lvl%>" min="0" required>
 
   <label for="item-crit-lvl">Critical Level: </label>
-    <input id="item-crit-lvl" type="number" name="crit_lvl" value="<%=@item.crit_lvl%>">
+    <input id="item-crit-lvl" type="number" name="crit_lvl" value="<%=@item.crit_lvl%>" min="0" required>
 
   <label for="item-notes">Notes: </label>
     <textarea id="item-notes" name="notes" rows="5"><%=@item.notes%></textarea>
