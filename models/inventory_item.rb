@@ -121,6 +121,21 @@ class InventoryItem
     InventoryItem.map_items result
   end
 
+  def InventoryItem.all_with_manufacturer_name
+    sql = '
+      SELECT
+        I.*,M.name AS manufacturer_name
+      FROM
+        inventory_items AS I
+      INNER JOIN
+        manufacturers AS M
+      ON
+        I.manufacturer_id = M.id
+    '
+    result = SqlRunner.run sql
+    result.map {|item| item}
+  end
+
   def InventoryItem.delete_all
     sql = 'DELETE FROM inventory_items'
     SqlRunner.run sql
