@@ -2,9 +2,8 @@
 
 <form class="index_form" action="/manufacturers" method="get">
   <Label>
-    Select a city: 
     <select id="filter_manufacturers" name="city">
-      <option disabled selected>select an option</option>
+      <option disabled selected> -- select an option -- </option>
       <%@manufacturers.each do |manufacturer|%>
         <%if manufacturer.city == @man_city%>
           <option value="<%=manufacturer.city%>" selected><%=manufacturer.city%></option>

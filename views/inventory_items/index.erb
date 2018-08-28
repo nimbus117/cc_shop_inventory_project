@@ -2,9 +2,8 @@
 
 <form class="index_form" action="/inventory" method="get">
   <Label>
-    Select a manufacturer: 
     <select id="filter_inventory" name="manufacturer_id">
-      <option disabled selected>select an option</option>
+      <option disabled selected> -- select an option -- </option>
       <%@manufacturers.each do |manufacturer|%>
         <%if manufacturer.id == @man_id%>
           <option value="<%=manufacturer.id%>" selected><%=manufacturer.name%></option>
