@@ -16,10 +16,10 @@ end
 post '/inventory/new' do
   new_item = InventoryItem.new(params)
   new_item.save
-  redirect to "/inventory/#{new_item.id}/show"
+  redirect to "/inventory/#{new_item.id}"
 end
 
-get '/inventory/:id/show' do
+get '/inventory/:id' do
   @item = InventoryItem.get_by_id params[:id].to_i
   erb :"inventory_items/show"
 end
@@ -39,7 +39,7 @@ end
 post '/inventory/:id/edit' do
   item = InventoryItem.new params
   item.update
-  redirect to "/inventory/#{item.id}/show"
+  redirect to "/inventory/#{item.id}"
 end
 
 get '/inventory/manufacturer/:id' do
