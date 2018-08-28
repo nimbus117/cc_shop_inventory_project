@@ -175,6 +175,8 @@ class InventoryItem
         I.manufacturer_id = M.id
       WHERE
         M.id = $1
+      ORDER BY
+        I.name
     '
     values = [id]
     result = SqlRunner.run sql, values

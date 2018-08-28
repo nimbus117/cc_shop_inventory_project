@@ -84,7 +84,7 @@ class Manufacturer
   end
 
   def Manufacturer.all
-    sql = 'SELECT * FROM manufacturers'
+    sql = 'SELECT * FROM manufacturers ORDER BY name'
     result = SqlRunner.run sql
     Manufacturer.map_items result
   end
