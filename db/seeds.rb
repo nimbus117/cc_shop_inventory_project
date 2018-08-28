@@ -33,6 +33,15 @@ manufacturer3 = Manufacturer.new({
 })
 manufacturer3.save
 
+manufacturer4 = Manufacturer.new({
+  'name' => "Cindy's Citruses",
+  'address' => '10 Last Street',
+  'city' => 'Dundee',
+  'post_code' => 'DD1 1BA',
+  'phone' => '0138-242-8787'
+})
+manufacturer4.save
+
 inventory_item1 = InventoryItem.new({
   'name' => 'Apples',
   'manufacturer_id' => manufacturer1.id,
@@ -166,7 +175,7 @@ inventory_item11.save
 
 inventory_item12 = InventoryItem.new({
   'name' => 'Grapefruit',
-  'manufacturer_id' => manufacturer1.id,
+  'manufacturer_id' => manufacturer4.id,
   'cost_price' => 0.5,
   'sell_price' => 0.8,
   'quantity' => 5,
@@ -178,7 +187,7 @@ inventory_item12.save
 
 inventory_item13 = InventoryItem.new({
   'name' => 'Lemon',
-  'manufacturer_id' => manufacturer2.id,
+  'manufacturer_id' => manufacturer4.id,
   'cost_price' => 0.25,
   'sell_price' => 0.4,
   'quantity' => 25,
