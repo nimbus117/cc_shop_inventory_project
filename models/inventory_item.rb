@@ -101,11 +101,11 @@ class InventoryItem
 
   def quantity_lvl
     if @quantity <= @crit_lvl
-      'quantity_critical'
+      'critical'
     elsif @quantity <= @wrn_lvl
-      'quantity_warning'
+      'warning'
     else
-      'quantity_ok'
+      'ok'
     end
   end
 

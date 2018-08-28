@@ -1,11 +1,11 @@
-.quantity_critical {
+.critical {
   color: red;
 }
 
-.quantity_warning {
+.warning {
   color: orange;
 }
 
-.quantity_ok {
+.ok {
   color: green;
 }
