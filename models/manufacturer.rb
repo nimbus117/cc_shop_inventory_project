@@ -70,6 +70,13 @@ class Manufacturer
     InventoryItem.map_items result
   end
 
+  def item_count
+    sql = 'SELECT COUNT(*) FROM inventory_items WHERE manufacturer_id = $1'
+    values = [@id]
+    result = SqlRunner.run sql, values
+    result.first['count'].to_i
+  end
+
   def Manufacturer.map_items manufacturer_data
     manufacturer_data.map do |manufacturer|
       Manufacturer.new manufacturer
