@@ -10,15 +10,17 @@
   <link rel="stylesheet" href="/styles/forms.css">
 </head>
 <body>
-  <header><h1>S2 - Simple Stock</h1></header>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/inventory">Inventory</a></li>
-      <li><a href="/manufacturers">Manufacturers</a></li>
-    </ul>
-  </nav>
-  <main><%=yield%></main>
-  <footer>&copy; 2018 - coded by <a href="mailto:mail@nimbus117.co.uk">nimbus117</a></footer>
+  <div class="main-container">
+    <header class="main-header"><h1>S2 - Simple Stock</h1></header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/inventory">Inventory</a></li>
+        <li><a href="/manufacturers">Manufacturers</a></li>
+      </ul>
+    </nav>
+    <main class="main-content"><%=yield%></main>
+    <footer class="main-nav">&copy; 2018 <a href="http://nimbus117.co.uk" target="_blank">nimbus117</a></footer>
+  </div>
 </body>
 </html>
