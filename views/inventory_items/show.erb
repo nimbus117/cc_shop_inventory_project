@@ -1,19 +1,26 @@
 <h2><%=@item.name%></h2>
 
-<ul>
-  <li>Manufacturer: <%=@item.manufacturer.name%></li>
-  <li>Cost price: <%=@item.cost_price%></li>
-  <li>Sell price: <%=@item.sell_price%></li>
-  <li>Markup: <%=@item.markup%></li>
-  <li>Quantity: <span class="<%=@item.quantity_lvl%>"><%=@item.quantity%></span></li>
-  <li>Warning level: <%=@item.wrn_lvl%></li>
-  <li>Critical level: <%=@item.crit_lvl%></li>
-  <li>Notes: <%=@item.notes%></li>
-</ul>
-
-
 <form action="/inventory/<%=@item.id%>/delete" method="post">
   <a href="/manufacturers/<%=@item.manufacturer_id%>"><button type="button">Manufacturer</button></a>
   <a href="/inventory/<%=@item.id%>/edit"><button type="button">Edit</button></a>
   <input class="btn delete-btn" type="submit" value="Delete">
 </form>
+
+<dl>
+  <dt>Manufacturer</dt>
+  <dd><%=@item.manufacturer.name%></dd>
+  <dt>Cost price</dt>
+  <dd><%=@item.cost_price%></dd>
+  <dt>Sell price</dt>
+  <dd><%=@item.sell_price%></dd>
+  <dt>Markup</dt>
+  <dd><%=@item.markup%></dd>
+  <dt>Quantity</dt>
+  <dd><span class="<%=@item.quantity_lvl%>"><%=@item.quantity%></span></dd>
+  <dt>Warning level</dt>
+  <dd><%=@item.wrn_lvl%></dd>
+  <dt>Critical level</dt>
+  <dd><%=@item.crit_lvl%></dd>
+  <dt>Notes</dt>
+  <dd><%=@item.notes%></dd>
+</dl>
