@@ -1,7 +1,7 @@
 <h2><%=@manufacturer.name%></h2>
 
 <form action="/manufacturers/<%=@manufacturer.id%>/delete" method="post">
-<a href="/inventory/manufacturer/<%=@manufacturer.id%>"><button type="button">Items</button></a>
+<a href="/inventory?manufacturer_id=<%=@manufacturer.id%>"><button type="button">Items</button></a>
 <a href="/manufacturers/<%=@manufacturer.id%>/edit"><button type="button">Edit</button></a>
   <%if @manufacturer.item_count > 0%>
   <input class="btn delete-btn" type="submit" value="Delete" disabled> 
