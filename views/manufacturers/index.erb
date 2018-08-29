@@ -1,7 +1,7 @@
 <h2>Manufacturers</h2>
 
 <form class="index_form" action="/manufacturers" method="get">
-  <Label>
+  <Label></label>
     <select id="filter_manufacturers" name="city">
       <option disabled selected> -- select an option -- </option>
       <%@manufacturers.each do |manufacturer|%>
@@ -12,7 +12,6 @@
         <%end%>
       <%end%>
     </select>
-  </label>
   <input class="btn" type="submit" value="Filter">
   <a href="/manufacturers"><button type="button">All</button></a>
   <a href="/manufacturers/new"><button type="button">Add Manufacturer</button></a>
