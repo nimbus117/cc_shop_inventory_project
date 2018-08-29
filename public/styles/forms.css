@@ -1,0 +1,19 @@
+form {
+  margin: 10px 0;
+}
+
+label, textarea {
+  display: block;
+  margin: 5px 0;
+}
+
+form.new_edit > input,
+form.new_edit > select,
+form.new_edit > textarea {
+  width: 200px;
+}
+
+form.new_edit > input.btn {
+  margin-top: 10px;
+  margin-left: 3px;
+}

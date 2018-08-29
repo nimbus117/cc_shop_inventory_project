@@ -1,6 +1,6 @@
 <h2><%=@manufacturer.name%> - Edit</h2>
 
-<form action="/manufacturers/<%=@manufacturer.id%>/edit" method="post">
+<form class="new_edit" action="/manufacturers/<%=@manufacturer.id%>/edit" method="post">
   <label for="manufacturer-name">Name: </label>
     <input id="manufacturer-name" type="text" name="name" value="<%=@manufacturer.name%>" required>
 
