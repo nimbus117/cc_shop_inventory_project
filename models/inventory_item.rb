@@ -224,7 +224,7 @@ class InventoryItem
       FROM
         inventory_items
       ORDER BY
-        priority
+        priority, quantity
       LIMIT #{count}
     "
     result = SqlRunner.run sql
