@@ -105,7 +105,7 @@ inventory_item6 = InventoryItem.new({
   'name' => 'Raspberries',
   'manufacturer_id' => manufacturer3.id,
   'cost_price' => 0.1,
-  'sell_price' => 0.3,
+  'sell_price' => 0.15,
   'quantity' => 10,
   'wrn_lvl' => 50,
   'crit_lvl' => 20,
@@ -116,7 +116,7 @@ inventory_item6.save
 inventory_item7 = InventoryItem.new({
   'name' => 'Blueberries',
   'manufacturer_id' => manufacturer3.id,
-  'cost_price' => 0.1,
+  'cost_price' => 0.15,
   'sell_price' => 0.3,
   'quantity' => 30,
   'wrn_lvl' => 40,
@@ -128,7 +128,7 @@ inventory_item7.save
 inventory_item8 = InventoryItem.new({
   'name' => 'Blackcurrants',
   'manufacturer_id' => manufacturer3.id,
-  'cost_price' => 0.1,
+  'cost_price' => 0.12,
   'sell_price' => 0.3,
   'quantity' => 50,
   'wrn_lvl' => 50,
