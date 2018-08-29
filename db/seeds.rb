@@ -20,7 +20,8 @@ manufacturer2 = Manufacturer.new({
   'address' => '101 Different Street',
   'city' => 'Edinburgh',
   'post_code' => 'EH4 8EY',
-  'phone' => '0131-332-4444'
+  'phone' => '0131-332-4444',
+  'notes' => 'Notes about manufacturer go here'
 })
 manufacturer2.save
 
@@ -29,7 +30,8 @@ manufacturer3 = Manufacturer.new({
   'address' => '10 Another Street',
   'city' => 'Glasgow',
   'post_code' => 'G1 1DA',
-  'phone' => '0141-442-4554'
+  'phone' => '0141-442-4554',
+  'notes' => 'Notes about manufacturer go here'
 })
 manufacturer3.save
 
@@ -38,7 +40,8 @@ manufacturer4 = Manufacturer.new({
   'address' => '10 Last Street',
   'city' => 'Dundee',
   'post_code' => 'DD1 1BA',
-  'phone' => '0138-242-8787'
+  'phone' => '0138-242-8787',
+  'notes' => 'Notes about manufacturer go here'
 })
 manufacturer4.save
 
