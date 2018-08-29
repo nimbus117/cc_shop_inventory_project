@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="/styles/main.css">
   <link rel="stylesheet" href="/styles/table.css">
   <link rel="stylesheet" href="/styles/highlight.css">
+  <link rel="stylesheet" href="/styles/header.css">
 </head>
 <body>
-  <div class="main-container">
-    <header class="main-header"><h1>S2 - Simple Stock</h1></header>
+  <header class="main-header">
+    <h1>S2 - Simple Stock</h1>
     <nav class="main-nav">
       <ul>
         <li><a href="/">Home</a></li>
@@ -18,8 +19,8 @@
         <li><a href="/manufacturers">Manufacturers</a></li>
       </ul>
     </nav>
-    <main class="main-content"><%=yield%></main>
-    <footer class="main-nav">&copy; 2018 <a href="http://nimbus117.co.uk" target="_blank">nimbus117</a></footer>
-  </div>
+  </header>
+  <main class="main-content"><%=yield%></main>
+  <footer class="main-nav">&copy; 2018 <a href="http://nimbus117.co.uk" target="_blank">nimbus117</a></footer>
 </body>
 </html>
