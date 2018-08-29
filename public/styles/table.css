@@ -25,7 +25,7 @@ table.blueTable thead {
 }
 table.blueTable thead th {
   letter-spacing: 1px;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: bold;
   color: #FFFFFF;
   border-left: 2px solid #D0E4F5;
