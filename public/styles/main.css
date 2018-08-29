@@ -23,9 +23,27 @@ h3 {
 
 footer {
   text-align: center;
+  margin: 20px 0;
+}
+
+form {
   margin: 10px 0;
+}
+
+dl > dt {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+dl > dd {
+  margin: 5px 10px;
 }
 
 div.summary {
   display: inline-grid;
+}
+
+address {
+  font-variant-caps: small-caps;
+  margin-bottom: 10px;
 }
