@@ -1,14 +1,5 @@
 <h2><%=@manufacturer.name%></h2>
 
-<ul>
-  <li>Address: <%=@manufacturer.address%></li>
-  <li>City: <%=@manufacturer.city%></li>
-  <li>Post Code: <%=@manufacturer.post_code%></li>
-  <li>Phone Number: <%=@manufacturer.phone%></li>
-  <li>Notes: <%=@manufacturer.notes%></li>
-</ul>
-
-
 <form action="/manufacturers/<%=@manufacturer.id%>/delete" method="post">
 <a href="/inventory/manufacturer/<%=@manufacturer.id%>"><button type="button">Items</button></a>
 <a href="/manufacturers/<%=@manufacturer.id%>/edit"><button type="button">Edit</button></a>
@@ -19,3 +10,13 @@
   <input class="btn delete-btn" type="submit" value="Delete">
   <%end%>
 </form>
+
+<address>
+  <%=@manufacturer.address%></br>
+  <%=@manufacturer.city%></br>
+  <%=@manufacturer.post_code%></br>
+  <%=@manufacturer.phone%></br>
+</address>
+
+<h3>Notes</h3>
+<p><%=@manufacturer.notes%></p>
