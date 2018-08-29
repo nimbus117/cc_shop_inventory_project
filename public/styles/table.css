@@ -2,15 +2,16 @@ table.blueTable {
   border: 1px solid #1C6EA4;
   background-color: #EEEEEE;
   text-align: left;
+  font-family: sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 table.blueTable td, table.blueTable th {
   border: 1px solid #AAAAAA;
-  padding: 3px 3px;
+  padding: 5px 5px;
 }
 table.blueTable tbody td {
-  font-size: 13px;
+  font-size: 0.9em;
 }
 table.blueTable tr:nth-child(even) {
   background: #D0E4F5;
@@ -23,7 +24,8 @@ table.blueTable thead {
   border-bottom: 2px solid #444444;
 }
 table.blueTable thead th {
-  font-size: 15px;
+  letter-spacing: 1px;
+  font-size: 1em;
   font-weight: bold;
   color: #FFFFFF;
   border-left: 2px solid #D0E4F5;
@@ -31,5 +33,3 @@ table.blueTable thead th {
 table.blueTable thead th:first-child {
   border-left: none;
 }
-
-
