@@ -11,9 +11,9 @@
   <li>Notes: <%=@item.notes%></li>
 </ul>
 
-<a href="/manufacturers/<%=@item.manufacturer_id%>"><button type="button">Manufacturer</button></a>
-<a href="/inventory/<%=@item.id%>/edit"><button type="button">Edit</button></a>
 
 <form action="/inventory/<%=@item.id%>/delete" method="post">
+  <a href="/manufacturers/<%=@item.manufacturer_id%>"><button type="button">Manufacturer</button></a>
+  <a href="/inventory/<%=@item.id%>/edit"><button type="button">Edit</button></a>
   <input class="btn delete-btn" type="submit" value="Delete">
 </form>

@@ -8,10 +8,10 @@
   <li>Notes: <%=@manufacturer.notes%></li>
 </ul>
 
-<a href="/inventory/manufacturer/<%=@manufacturer.id%>"><button type="button">Items</button></a>
-<a href="/manufacturers/<%=@manufacturer.id%>/edit"><button type="button">Edit</button></a>
 
 <form action="/manufacturers/<%=@manufacturer.id%>/delete" method="post">
+<a href="/inventory/manufacturer/<%=@manufacturer.id%>"><button type="button">Items</button></a>
+<a href="/manufacturers/<%=@manufacturer.id%>/edit"><button type="button">Edit</button></a>
   <%if @manufacturer.item_count > 0%>
   <input class="btn delete-btn" type="submit" value="Delete" disabled> 
   <span class="critical">Delete inventory items first</span>
