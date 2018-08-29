@@ -5,7 +5,6 @@ header {
   background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
   border: 2px solid #444444;
   padding: 10px;
-  color: #FFFFFF;
 }
 
 h1, nav, ul, li {
@@ -13,6 +12,7 @@ h1, nav, ul, li {
 }
 
 li > a {
+  font-size: 1.7em;
   color: white;
   text-decoration: none;
   padding-left: 10px;
