@@ -7,7 +7,7 @@ Manufacturer.delete_all
 
 manufacturer1 = Manufacturer.new({
   'name' => "Fred's Fruits",
-  'address' => '100 Some Street',
+  'address' => '37 Last Street',
   'city' => 'Edinburgh',
   'post_code' => 'EH4 7EY',
   'phone' => '0131-332-2233',
@@ -17,7 +17,7 @@ manufacturer1.save
 
 manufacturer2 = Manufacturer.new({
   'name' => "Bob's Bananas",
-  'address' => '101 Different Street',
+  'address' => '17 Another Street',
   'city' => 'Edinburgh',
   'post_code' => 'EH4 8EY',
   'phone' => '0131-332-4444',
@@ -27,7 +27,7 @@ manufacturer2.save
 
 manufacturer3 = Manufacturer.new({
   'name' => "Betty's Berries",
-  'address' => '10 Another Street',
+  'address' => '10 Some Street',
   'city' => 'Glasgow',
   'post_code' => 'G1 1DA',
   'phone' => '0141-442-4554',
@@ -37,7 +37,7 @@ manufacturer3.save
 
 manufacturer4 = Manufacturer.new({
   'name' => "Cindy's Citruses",
-  'address' => '10 Last Street',
+  'address' => '11 Different Street',
   'city' => 'Dundee',
   'post_code' => 'DD1 1BA',
   'phone' => '0138-242-8787',
