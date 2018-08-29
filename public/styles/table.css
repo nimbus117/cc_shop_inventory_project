@@ -33,3 +33,11 @@ table.blueTable thead th {
 table.blueTable thead th:first-child {
   border-left: none;
 }
+
+div.summary > table.blueTable {
+  max-width: 610px;
+}
+
+div.summary {
+  margin-top: 20px;
+}
