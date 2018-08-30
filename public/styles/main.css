@@ -1,24 +1,21 @@
 body {
-  background-color: lightblue;
+  background-color: #F5E7D0;
+  font-family: sans-serif;
 }
+
 main {
   margin: 10px;
 }
 
 h1 {
-  font-size: 1.7em;
+  font-size: 1.8em;
   margin: 10px 0;
   margin: 10px 10px 10px 0;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin: 10px 0;
-}
-
-h3 {
-  font-size: 1.3em;
-  margin: 8px 0;
 }
 
 footer {
@@ -29,13 +26,23 @@ footer {
 dl > dt {
   font-weight: bold;
   text-decoration: underline;
+  font-size: 1.2em;
 }
 
 dl > dd {
   margin: 5px 10px;
+  font-size: 1.1em;
 }
 
 address {
   font-variant-caps: small-caps;
   margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+div.card {
+  padding: 20px;
+  width: 390px;
+  box-shadow: 0 1px 5px rgba(50, 50, 50, 0.8);
+  background-color: #D0E4F5;
 }

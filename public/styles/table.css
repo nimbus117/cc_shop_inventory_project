@@ -2,9 +2,9 @@ table.blueTable {
   border: 1px solid #1C6EA4;
   background-color: #EEEEEE;
   text-align: left;
-  font-family: sans-serif;
   border-collapse: collapse;
   width: 100%;
+  box-shadow: 0 1px 5px rgba(50, 50, 50, 0.8);
 }
 table.blueTable td, table.blueTable th {
   border: 1px solid #AAAAAA;
@@ -35,7 +35,7 @@ table.blueTable thead th:first-child {
 }
 
 div.summary > table.blueTable {
-  max-width: 610px;
+  max-width: 630px;
 }
 
 div.summary {

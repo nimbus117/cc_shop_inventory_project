@@ -9,8 +9,10 @@ label, textarea {
 
 form.new_edit > input,
 form.new_edit > select,
+form.new_edit > label,
 form.new_edit > textarea {
-  width: 200px;
+  width: 420px;
+  font-size: 1.05em;
 }
 
 form.new_edit > input.btn {

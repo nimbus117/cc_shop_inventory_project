@@ -11,14 +11,16 @@
   <%end%>
 </form>
 
-<address>
-  <%=@manufacturer.address%></br>
-  <%=@manufacturer.city%></br>
-  <%=@manufacturer.post_code%></br>
-  <%=@manufacturer.phone%></br>
-</address>
+<div class="card">
+  <address>
+    <%=@manufacturer.address%></br>
+    <%=@manufacturer.city%></br>
+    <%=@manufacturer.post_code%></br>
+    <%=@manufacturer.phone%></br>
+  </address>
 
-<dl>
-  <dt>Notes</dt>
-  <dd><%=@manufacturer.notes%></dd>
-</dl>
+  <dl>
+    <dt>Notes</dt>
+    <dd><%=@manufacturer.notes%></dd>
+  </dl>
+</div>
