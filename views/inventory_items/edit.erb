@@ -3,7 +3,7 @@
 <%man_name = @item.manufacturer.name%>
 
 <form class="new_edit" action="/inventory/<%=@item.id%>/edit" method="post">
-  <Label>Select a manufacturer: </label>
+  <label>Select a manufacturer: </label>
     <select id="edit_item_form" name="manufacturer_id">
       <%@manufacturers.each do |manufacturer|%>
         <%if manufacturer.name == man_name%>

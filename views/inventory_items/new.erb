@@ -1,7 +1,7 @@
 <h2>New Item</h2>
 
 <form class="new_edit" action="/inventory/new" method="post">
-  <Label>Select a manufacturer: </label>
+  <label>Select a manufacturer: </label>
     <select id="new_item_form" name="manufacturer_id">
       <%@manufacturers.each do |manufacturer|%>
         <option value="<%=manufacturer.id%>"><%=manufacturer.name%></option>
