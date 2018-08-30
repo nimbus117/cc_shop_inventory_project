@@ -11,7 +11,7 @@ manufacturer1 = Manufacturer.new({
   'city' => 'Edinburgh',
   'post_code' => 'EH4 7EY',
   'phone' => '0131-332-2233',
-  'notes' => 'Notes about manufacturer go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 manufacturer1.save
 
@@ -21,7 +21,7 @@ manufacturer2 = Manufacturer.new({
   'city' => 'Edinburgh',
   'post_code' => 'EH4 8EY',
   'phone' => '0131-332-4444',
-  'notes' => 'Notes about manufacturer go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 manufacturer2.save
 
@@ -31,7 +31,7 @@ manufacturer3 = Manufacturer.new({
   'city' => 'Glasgow',
   'post_code' => 'G1 1DA',
   'phone' => '0141-442-4554',
-  'notes' => 'Notes about manufacturer go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 manufacturer3.save
 
@@ -41,7 +41,7 @@ manufacturer4 = Manufacturer.new({
   'city' => 'Dundee',
   'post_code' => 'DD1 1BA',
   'phone' => '0138-242-8787',
-  'notes' => 'Notes about manufacturer go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 manufacturer4.save
 
@@ -53,7 +53,7 @@ inventory_item1 = InventoryItem.new({
   'quantity' => 20,
   'wrn_lvl' => 15,
   'crit_lvl' => 10,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item1.save
 
@@ -64,7 +64,8 @@ inventory_item2 = InventoryItem.new({
   'sell_price' => 0.4,
   'quantity' => 20,
   'wrn_lvl' => 25,
-  'crit_lvl' => 10
+  'crit_lvl' => 10,
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item2.save
 
@@ -76,7 +77,7 @@ inventory_item3 = InventoryItem.new({
   'quantity' => 35,
   'wrn_lvl' => 30,
   'crit_lvl' => 20,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item3.save
 
@@ -88,7 +89,7 @@ inventory_item4 = InventoryItem.new({
   'quantity' => 10,
   'wrn_lvl' => 40,
   'crit_lvl' => 20,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item4.save
 
@@ -100,7 +101,7 @@ inventory_item5 = InventoryItem.new({
   'quantity' => 100,
   'wrn_lvl' => 40,
   'crit_lvl' => 20,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item5.save
 
@@ -112,7 +113,7 @@ inventory_item6 = InventoryItem.new({
   'quantity' => 10,
   'wrn_lvl' => 50,
   'crit_lvl' => 20,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item6.save
 
@@ -124,7 +125,7 @@ inventory_item7 = InventoryItem.new({
   'quantity' => 30,
   'wrn_lvl' => 40,
   'crit_lvl' => 20,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item7.save
 
@@ -136,7 +137,7 @@ inventory_item8 = InventoryItem.new({
   'quantity' => 50,
   'wrn_lvl' => 50,
   'crit_lvl' => 30,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item8.save
 
@@ -148,7 +149,7 @@ inventory_item9 = InventoryItem.new({
   'quantity' => 100,
   'wrn_lvl' => 150,
   'crit_lvl' => 50,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item9.save
 
@@ -160,7 +161,7 @@ inventory_item10 = InventoryItem.new({
   'quantity' => 10,
   'wrn_lvl' => 20,
   'crit_lvl' => 5,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item10.save
 
@@ -172,7 +173,7 @@ inventory_item11 = InventoryItem.new({
   'quantity' => 80,
   'wrn_lvl' => 40,
   'crit_lvl' => 20,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item11.save
 
@@ -184,7 +185,7 @@ inventory_item12 = InventoryItem.new({
   'quantity' => 5,
   'wrn_lvl' => 20,
   'crit_lvl' => 10,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item12.save
 
@@ -196,7 +197,7 @@ inventory_item13 = InventoryItem.new({
   'quantity' => 25,
   'wrn_lvl' => 30,
   'crit_lvl' => 20,
-  'notes' => 'notes about item go here'
+  'notes' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur varius elit vitae justo hendrerit, vitae fermentum est dapibus. Ut a libero quam. Quisque bibendum pellentesque tempor. Praesent ac lobortis risus. Pellentesque mi est, mattis eu leo eget, commodo tempus massa. Sed mi justo, tempor quis interdum vel, sagittis a velit.'
 })
 inventory_item13.save
 
